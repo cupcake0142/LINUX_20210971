@@ -1,0 +1,192 @@
+Script started on 2026-04-03 09:40:09+09:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="120" LINES="30"]
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ [7mmkdir –p web_service/html[27mmkdir –p web_service/html
+[?2004lmkdir: cannot create directory ‘web_service/html’: No such file or directory
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ [7mmkdir -p web_service/html[27mmkdir -p web_service/html
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ ls
+[?2004l2026_학번_week03_log.txt  t.txt  [0m[01;34mweb_service[0m  [01;34m–p[0m
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ [7mcd web_service[27mcd web_service
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mtouch docker-compose.xml[27mtouch docker-compose.xml
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ ls
+[?2004ldocker-compose.xml  [0m[01;34mhtml[0m
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mexplorer.exe .[27mexplorer.exe .
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7msudo apt install docker-compose[27msudo apt install docker-compose
+[?2004l[sudo] password for wnseb: 
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  python3-compose python3-docker python3-dockerpty python3-docopt python3-dotenv python3-packaging python3-texttable
+  python3-websocket
+Recommended packages:
+  docker.io
+The following NEW packages will be installed:
+  docker-compose python3-compose python3-docker python3-dockerpty python3-docopt python3-dotenv python3-packaging
+  python3-texttable python3-websocket
+0 upgraded, 9 newly installed, 0 to remove and 32 not upgraded.
+Need to get 338 kB of archives.
+After this operation, 1779 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-websocket all 1.7.0-1 [38.1 kB]
+[33m3% [1 python3-websocket 11.8 kB/38.1 kB 31%][0m[33m                                            11% [Waiting for headers][0m                         Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-packaging all 24.0-1 [41.1 kB]
+[33m11% [2 python3-packaging 1058 B/41.1 kB 3%][0m                                           Get:3 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-docker all 5.0.3-1ubuntu1.1 [89.1 kB]
+[33m                                           24% [3 python3-docker 1461 B/89.1 kB 2%][0m[33m                                        47% [Waiting for headers][0m                         Get:4 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-dockerpty all 0.4.1-5 [11.4 kB]
+[33m47% [4 python3-dockerpty 1067 B/11.4 kB 9%][0m                                           Get:5 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-docopt all 0.6.2-6 [26.1 kB]
+[33m                                           51% [5 python3-docopt 139 B/26.1 kB 1%][0m[33m                                       60% [Waiting for headers][0m                         Get:6 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-dotenv all 1.0.1-1 [22.3 kB]
+[33m60% [6 python3-dotenv 705 B/22.3 kB 3%][0m[33m                                       67% [Waiting for headers][0m                         Get:7 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-texttable all 1.6.7-1 [11.0 kB]
+[33m67% [7 python3-texttable 594 B/11.0 kB 5%][0m[33m                                          72% [Waiting for headers][0m                         Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 python3-compose all 1.29.2-6ubuntu1 [84.6 kB]
+[33m72% [8 python3-compose 49 B/84.6 kB 0%][0m[33m                                       94% [Waiting for headers][0m                         Get:9 http://archive.ubuntu.com/ubuntu noble/universe amd64 docker-compose all 1.29.2-6ubuntu1 [14.0 kB]
+[33m95% [9 docker-compose 630 B/14.0 kB 4%][0m[33m                                       100% [Working][0m              Fetched 338 kB in 2s (197 kB/s)
+
+7[0;29r8[1ASelecting previously unselected package python3-websocket.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 41331 files and directories currently installed.)
+Preparing to unpack .../0-python3-websocket_1.7.0-1_all.deb ...
+7[30;0f[42m[30mProgress: [  0%][49m[39m [..................................................................................................] 87[30;0f[42m[30mProgress: [  3%][49m[39m [##................................................................................................] 8Unpacking python3-websocket (1.7.0-1) ...
+7[30;0f[42m[30mProgress: [  5%][49m[39m [#####.............................................................................................] 8Selecting previously unselected package python3-packaging.
+Preparing to unpack .../1-python3-packaging_24.0-1_all.deb ...
+7[30;0f[42m[30mProgress: [  8%][49m[39m [#######...........................................................................................] 8Unpacking python3-packaging (24.0-1) ...
+7[30;0f[42m[30mProgress: [ 11%][49m[39m [##########........................................................................................] 8Selecting previously unselected package python3-docker.
+Preparing to unpack .../2-python3-docker_5.0.3-1ubuntu1.1_all.deb ...
+7[30;0f[42m[30mProgress: [ 14%][49m[39m [#############.....................................................................................] 8Unpacking python3-docker (5.0.3-1ubuntu1.1) ...
+7[30;0f[42m[30mProgress: [ 16%][49m[39m [###############...................................................................................] 8Selecting previously unselected package python3-dockerpty.
+Preparing to unpack .../3-python3-dockerpty_0.4.1-5_all.deb ...
+7[30;0f[42m[30mProgress: [ 19%][49m[39m [##################................................................................................] 8Unpacking python3-dockerpty (0.4.1-5) ...
+7[30;0f[42m[30mProgress: [ 22%][49m[39m [#####################.............................................................................] 8Selecting previously unselected package python3-docopt.
+Preparing to unpack .../4-python3-docopt_0.6.2-6_all.deb ...
+7[30;0f[42m[30mProgress: [ 24%][49m[39m [#######################...........................................................................] 8Unpacking python3-docopt (0.6.2-6) ...
+7[30;0f[42m[30mProgress: [ 27%][49m[39m [##########################........................................................................] 8Selecting previously unselected package python3-dotenv.
+Preparing to unpack .../5-python3-dotenv_1.0.1-1_all.deb ...
+7[30;0f[42m[30mProgress: [ 30%][49m[39m [#############################.....................................................................] 8Unpacking python3-dotenv (1.0.1-1) ...
+7[30;0f[42m[30mProgress: [ 32%][49m[39m [###############################...................................................................] 8Selecting previously unselected package python3-texttable.
+Preparing to unpack .../6-python3-texttable_1.6.7-1_all.deb ...
+7[30;0f[42m[30mProgress: [ 35%][49m[39m [##################################................................................................] 8Unpacking python3-texttable (1.6.7-1) ...
+7[30;0f[42m[30mProgress: [ 38%][49m[39m [#####################################.............................................................] 8Selecting previously unselected package python3-compose.
+Preparing to unpack .../7-python3-compose_1.29.2-6ubuntu1_all.deb ...
+7[30;0f[42m[30mProgress: [ 41%][49m[39m [#######################################...........................................................] 8Unpacking python3-compose (1.29.2-6ubuntu1) ...
+7[30;0f[42m[30mProgress: [ 43%][49m[39m [##########################################........................................................] 8Selecting previously unselected package docker-compose.
+Preparing to unpack .../8-docker-compose_1.29.2-6ubuntu1_all.deb ...
+7[30;0f[42m[30mProgress: [ 46%][49m[39m [#############################################.....................................................] 8Unpacking docker-compose (1.29.2-6ubuntu1) ...
+7[30;0f[42m[30mProgress: [ 49%][49m[39m [###############################################...................................................] 8Setting up python3-dotenv (1.0.1-1) ...
+7[30;0f[42m[30mProgress: [ 51%][49m[39m [##################################################................................................] 87[30;0f[42m[30mProgress: [ 54%][49m[39m [####################################################..............................................] 8Setting up python3-texttable (1.6.7-1) ...
+7[30;0f[42m[30mProgress: [ 57%][49m[39m [#######################################################...........................................] 87[30;0f[42m[30mProgress: [ 59%][49m[39m [##########################################################........................................] 8Setting up python3-docopt (0.6.2-6) ...
+7[30;0f[42m[30mProgress: [ 62%][49m[39m [############################################################......................................] 87[30;0f[42m[30mProgress: [ 65%][49m[39m [###############################################################...................................] 8Setting up python3-packaging (24.0-1) ...
+7[30;0f[42m[30mProgress: [ 68%][49m[39m [##################################################################................................] 87[30;0f[42m[30mProgress: [ 70%][49m[39m [####################################################################..............................] 8Setting up python3-websocket (1.7.0-1) ...
+7[30;0f[42m[30mProgress: [ 73%][49m[39m [#######################################################################...........................] 87[30;0f[42m[30mProgress: [ 76%][49m[39m [##########################################################################........................] 8Setting up python3-dockerpty (0.4.1-5) ...
+7[30;0f[42m[30mProgress: [ 78%][49m[39m [############################################################################......................] 87[30;0f[42m[30mProgress: [ 81%][49m[39m [###############################################################################...................] 8Setting up python3-docker (5.0.3-1ubuntu1.1) ...
+7[30;0f[42m[30mProgress: [ 84%][49m[39m [##################################################################################................] 87[30;0f[42m[30mProgress: [ 86%][49m[39m [####################################################################################..............] 8Setting up python3-compose (1.29.2-6ubuntu1) ...
+7[30;0f[42m[30mProgress: [ 89%][49m[39m [#######################################################################################...........] 87[30;0f[42m[30mProgress: [ 92%][49m[39m [##########################################################################################........] 8Setting up docker-compose (1.29.2-6ubuntu1) ...
+7[30;0f[42m[30mProgress: [ 95%][49m[39m [############################################################################################......] 87[30;0f[42m[30mProgress: [ 97%][49m[39m [###############################################################################################...] 8Processing triggers for man-db (2.12.0-4build2) ...
+
+7[0;30r8[1A[J[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mdocker-compose up –d[27mdocker-compose up –d
+[?2004l[31mERROR[0m: 
+        Can't find a suitable configuration file in this directory or any
+        parent. Are you in the right directory?
+
+        Supported filenames: docker-compose.yml, docker-compose.yaml, compose.yml, compose.yaml
+        
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mdocker-compose up –d[27mdocker-compose up –d
+[?2004l[31mERROR[0m: In file './docker-compose.yml', service 'image' must be a mapping not a string.
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ docker-compose up –d
+[?2004lCreating network "web_service_web-net" with driver "bridge"
+[31mERROR[0m: No such service: –d
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ docker-compose up –d
+[?2004l[31mERROR[0m: No such service: –d
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mdocker-compose up -d[27mdocker-compose up -d
+[?2004lPulling nginx-server (nginx:1.25-alpine)...
+[2K1.25-alpine: Pulling from library/nginx
+
+[1A[2K4abcf2066143: Pulling fs layer[1B
+[1A[2K5406ed7b06d9: Pulling fs layer[1B
+[1A[2Kd4bca490e609: Pulling fs layer[1B
+[1A[2Kfc21a1d387f5: Pulling fs layer[1B
+[1A[2Ke6ef242c1570: Pulling fs layer[1B
+[1A[2K8a3742a9529d: Pulling fs layer[1B
+[1A[2K0d0c16747d2c: Pulling fs layer[1B
+[1A[2K13fcfbc94648: Pulling fs layer[1B
+[1A[2Kfc44f5562637: Download complete[1B
+[1A[2K30d1be61be14: Downloading (85.2%)[1B[1A[2K30d1be61be14: Downloading (85.2%)[1B[9A[2K5406ed7b06d9: Download complete[9B[1A[2K30d1be61be14: Downloading (85.2%)[1B[3A[2K13fcfbc94648: Downloading (100.0%)[3B[1A[2K30d1be61be14: Download complete[1B[5A[2K8a3742a9529d: Download complete[5B[8A[2Kd4bca490e609: Download complete[8B[3A[2K13fcfbc94648: Download complete[3B[10A[2K4abcf2066143: Downloading (30.8%)[10B[6A[2Ke6ef242c1570: Download complete[6B[10A[2K4abcf2066143: Downloading (61.5%)[10B[10A[2K4abcf2066143: Download complete[10B[10A[2K4abcf2066143: Extracting[10B[4A[2K0d0c16747d2c: Downloading (8.0%)[4B[10A[2K4abcf2066143: Pull complete[10B[4A[2K0d0c16747d2c: Downloading (8.0%)[4B[4A[2K0d0c16747d2c: Downloading (16.1%)[4B[4A[2K0d0c16747d2c: Downloading (24.1%)[4B[4A[2K0d0c16747d2c: Downloading (32.2%)[4B[4A[2K0d0c16747d2c: Downloading (32.2%)[4B[4A[2K0d0c16747d2c: Downloading (40.2%)[4B[7A[2Kfc21a1d387f5: Downloading (26.3%)[7B[4A[2K0d0c16747d2c: Downloading (40.2%)[4B[7A[2Kfc21a1d387f5: Downloading (26.3%)[7B[4A[2K0d0c16747d2c: Downloading (48.2%)[4B[7A[2Kfc21a1d387f5: Downloading (26.3%)[7B[4A[2K0d0c16747d2c: Downloading (56.3%)[4B[7A[2Kfc21a1d387f5: Downloading (26.3%)[7B[4A[2K0d0c16747d2c: Downloading (56.3%)[4B[7A[2Kfc21a1d387f5: Downloading (52.6%)[7B[4A[2K0d0c16747d2c: Downloading (64.3%)[4B[4A[2K0d0c16747d2c: Downloading (72.4%)[4B[7A[2Kfc21a1d387f5: Downloading (52.6%)[7B[7A[2Kfc21a1d387f5: Downloading (52.6%)[7B[4A[2K0d0c16747d2c: Downloading (72.4%)[4B[7A[2Kfc21a1d387f5: Downloading (52.6%)[7B[4A[2K0d0c16747d2c: Downloading (80.4%)[4B[4A[2K0d0c16747d2c: Downloading (80.4%)[4B[7A[2Kfc21a1d387f5: Downloading (78.9%)[7B[7A[2Kfc21a1d387f5: Downloading (78.9%)[7B[4A[2K0d0c16747d2c: Downloading (88.5%)[4B[7A[2Kfc21a1d387f5: Downloading (78.9%)[7B[4A[2K0d0c16747d2c: Downloading (96.5%)[4B[4A[2K0d0c16747d2c: Download complete[4B[7A[2Kfc21a1d387f5: Download complete[7B[7A[2Kfc21a1d387f5: Extracting[7B[3A[2K13fcfbc94648: Extracting[3B[6A[2Ke6ef242c1570: Pull complete[6B[7A[2Kfc21a1d387f5: Pull complete[7B[9A[2K5406ed7b06d9: Pull complete[9B[5A[2K8a3742a9529d: Pull complete[5B[8A[2Kd4bca490e609: Pull complete[8B[3A[2K13fcfbc94648: Pull complete[3B[4A[2K0d0c16747d2c: Extracting[4B[4A[2K0d0c16747d2c: Extracting[4B[4A[2K0d0c16747d2c: Pull complete[4B[2KDigest: sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00
+[2KStatus: Downloaded newer image for nginx:1.25-alpine
+Creating my-web-proxy ... 
+[1A[2KCreating my-web-proxy ... [32mdone[0m[1B[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mcd html/[27mcd html/
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mcd ~/linux/week03/www/[27mcd ~/linux/week03/www/
+[?2004lbash: cd: /home/wnseb/linux/week03/www/: No such file or directory
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mcurl -fsSL https://get.docker.com -o get-docker.sh[27mcurl -fsSL https://get.docker.com -o get-docker.sh
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7msudo sh get-docker.sh[27msudo sh get-docker.sh
+[?2004l# Executing docker install script, commit: c04fb16bb8bd8ed6ce884bb40570cbcd6101ae0c
+Warning: the "docker" command appears to already exist on this system.
+
+If you already have Docker installed, this script can cause trouble, which is
+why we're displaying this warning and provide the opportunity to cancel the
+installation.
+
+If you installed the current Docker package using this script and are using it
+again to update Docker, you can ignore this message, but be aware that the
+script resets any custom changes in the deb and rpm repo configuration
+files to match the parameters passed to the script.
+
+You may press Ctrl+C now to abort this script.
++ sleep 20
+newgrp docker
+sd  sad
+
+a 
+WSL DETECTED: We recommend using Docker Desktop for Windows.
+Please get Docker Desktop from https://www.docker.com/products/docker-desktop/
+
+
+You may press Ctrl+C now to abort this script.
++ sleep 20
+^C
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mnewgrp docker[27mnewgrp docker
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mdocker –version[27mdocker –version
+[?2004ldocker: unknown command: docker –version
+
+Run 'docker --help' for more information
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mdocker --version[27mdocker --version
+[?2004lDocker version 29.3.0, build 5927d80
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mdocker exec -it my-nginx bash[27mdocker exec -it my-nginx bash
+[?2004lError response from daemon: No such container: my-nginx
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mdocker images[27mdocker images
+[?2004l                                                                                                    [1m[106m[30mi[0m[0m [96mInfo → [0m[0m [38;5;0m[48;5;14m U [0m In Use
+[39m[1mIMAGE[0m                [39m[1mID[0m             [39m[1mDISK USAGE[0m   [39m[1mCONTENT SIZE[0m   [39m[1mEXTRA[0m
+[34m[1mhello-world:latest[0m   [39m85404b3c5395[0m       [39m25.9kB[0m         [39m9.52kB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mnginx:1.25-alpine[0m    [39m516475cc129d[0m       [39m75.4MB[0m         [39m21.7MB[0m   [38;5;0m[48;5;14m U [0m  
+[34m[1mnginx:latest[0m         [39mbc45d248c4e1[0m        [39m240MB[0m         [39m65.8MB[0m        
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mdocker pull ubuntu:latest[27mdocker pull ubuntu:latest
+[?2004llatest: Pulling from library/ubuntu
+
+[1A[2K817807f3c64e: Pulling fs layer [1B
+[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K817807f3c64e: Downloading [=>                                                 ]  1.049MB/29.73MB[2B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K817807f3c64e: Downloading [===>                                               ]  2.097MB/29.73MB[2B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K817807f3c64e: Downloading [===>                                               ]  2.097MB/29.73MB[2B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K817807f3c64e: Downloading [=====>                                             ]  3.146MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=======>                                           ]  4.194MB/29.73MB[2B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K817807f3c64e: Downloading [========>                                          ]  5.243MB/29.73MB[2B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K817807f3c64e: Downloading [==========>                                        ]  6.291MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [============>                                      ]   7.34MB/29.73MB[2B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[1A[2Ke4a1e8de092c: Downloading [===========================>                       ]  1.049MB/1.938MB[1B[2A[2K817807f3c64e: Downloading [==============>                                    ]  8.389MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [==============>                                    ]  8.389MB/29.73MB[2B[1A[2Ke4a1e8de092c: Download complete [1B[2A[2K817807f3c64e: Downloading [===============>                                   ]  9.437MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=================>                                 ]  10.49MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [===================>                               ]  11.53MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=====================>                             ]  12.58MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=====================>                             ]  12.58MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [======================>                            ]  13.63MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [========================>                          ]  14.68MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [==========================>                        ]  15.73MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [============================>                      ]  16.78MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=============================>                     ]  17.83MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=============================>                     ]  17.83MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [===============================>                   ]  18.87MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=================================>                 ]  19.92MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [===================================>               ]  20.97MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=====================================>             ]  22.02MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [======================================>            ]  23.07MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [========================================>          ]  24.12MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [========================================>          ]  24.12MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [==========================================>        ]  25.17MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [============================================>      ]  26.21MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=============================================>     ]  27.26MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [===============================================>   ]  28.31MB/29.73MB[2B[2A[2K817807f3c64e: Downloading [=================================================> ]  29.36MB/29.73MB[2B[2A[2K817807f3c64e: Download complete [2B[2A[2K817807f3c64e: Extracting 1 s[2B[2A[2K817807f3c64e: Extracting 1 s[2B[2A[2K817807f3c64e: Extracting 1 s[2B[2A[2K817807f3c64e: Extracting 1 s[2B[2A[2K817807f3c64e: Extracting 1 s[2B[2A[2K817807f3c64e: Extracting 1 s[2B[2A[2K817807f3c64e: Extracting 1 s[2B[2A[2K817807f3c64e: Pull complete [2BDigest: sha256:186072bba1b2f436cbb91ef2567abca677337cfc786c86e107d25b7072feef0c
+Status: Downloaded newer image for ubuntu:latest
+docker.io/library/ubuntu:latest
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mdocker ps[27mdocker ps
+[?2004lCONTAINER ID   IMAGE               COMMAND                  CREATED         STATUS         PORTS                                 NAMES
+b824fa63b7ad   nginx:1.25-alpine   "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:80->80/tcp, [::]:80->80/tcp   my-web-proxy
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ ls
+[?2004lget-docker.sh
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mcd ~/linux/week03[27mcd ~/linux/week03
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ ls
+[?2004l2026_20210971_week03_log.txt  t.txt  [0m[01;34mweb_service[0m  [01;34m–p[0m
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ [7mmkdir www[27mmkdir www
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ [7mdocker cp my-nginx:/usr/share/nginx/html/. ./www/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker cp my-nginx:/usr/share/nginx/html/. ./www/
+[?2004lError response from daemon: No such container: my-nginx
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ [7mdocker run -d --name my-nginx -p 8080:80 nginx:latest[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -d --name my-nginx -p 8080:80 nginx:latest
+[?2004le9742896da54703c21fed3debd6a8cea8c4290f3cde8cfd89430f90795559d07
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ [7mdocker cp my-nginx:/usr/share/nginx/html/. ./www/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker cp my-nginx:/usr/share/nginx/html/. ./www/
+[?2004lSuccessfully copied 4.1kB to /home/wnseb/linux/week03/www/
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03[00m$ [7mcd ~/linux/week03/www[27mcd ~/linux/week03/www
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/www[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/www[00m$ [7mnano ~/linux/week03/www/index.html[27mnano ~/linux/week03/www/index.html
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;54H(B[0;7m[ Reading... ](B[m[28;52H(B[0;7m[ Read 27 lines ](B[m[H(B[0;7m  GNU nano 7.2                             /home/wnseb/linux/week03/www/index.html                                      [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[36m<!DOCTYPE html>[3d<html>[4d<head>[5d<title>[39m(B[mWelcome to nginx![36m</title>[6d<style>[7d[39m(B[mhtml { color-scheme: light dark; }[8dbody { width: 35em; margin: 0 auto;[9dfont-family: Tahoma, Verdana, Arial, sans-serif; }[10d[36m</style>[11d</head>[12d<body>[13d<h1>[39m(B[mWelcome to nginx![36m</h1>[14d<p>[39m(B[mIf you see this page, nginx is successfully installed and working.[15dFurther configuration is required for the web server, reverse proxy,[16dAPI gateway, load balancer, content cache, or other features.[36m</p>[18d<p>[39m(B[mFor online documentation and support please refer to[19d[36m<a [31mhref=[32m"https://nginx.org/"[36m>[39m(B[mnginx.org[36m</a>[39m(B[m.[36m<br/>[20d[39m(B[mTo engage with the community please visit[21d[36m<a [31mhref=[32m"https://community.nginx.org/"[36m>[39m(B[mcommunity.nginx.org[36m</a>[39m(B[m.[36m<br/>[22d[39m(B[mFor enterprise grade support, professional services, additional[23dsecurity features and capabilities please refer to[24d[36m<a [31mhref=[32m"https://f5.com/nginx"[36m>[39m(B[mf5.com/nginx[36m</a>[39m(B[m.[36m</p>[26d<p>(B[0;1m[35m<em>[39m(B[mThank you for using nginx.(B[0;1m[35m</em>(B[0m[36m</p>[27d</body>[2d[39m(B[m[?12l[?25h[?25l[28d[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/www[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/www[00m$ [7mcp ~/linux/week03/www/index.html ~/linux/week03/web_service/html/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/linux/week03/www/index.html ~/linux/week03/web_service/html/
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/www[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/www[00m$ [7mcd ~/linux/week03/web_service[27mcd ~/linux/week03/web_service
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mdocker-compose up -d[27mdocker-compose up -d
+[?2004lmy-web-proxy is up-to-date
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mrm -rf ~/linux/week03/-p[27mrm -rf ~/linux/week03/-p
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mcp ~/linux/week03/www/index.html ~/linux/week03/web_service/html/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/linux/week03/www/index.html ~/linux/week03/web_service/html/
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mcd ~/linux/week03/web_service[27mcd ~/linux/week03/web_service
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mdocker-compose up -d[27mdocker-compose up -d
+[?2004lmy-web-proxy is up-to-date
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mcp ~/linux/week03/www/index.html ~/linux/week03/web_service/html/[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/linux/week03/www/index.html ~/linux/week03/web_service/html/
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service[00m$ [7mexit[27mexit
+[?2004lexit
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week03/web_service/html[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week03/web_service/html[00m$ [7mcd ~/linux[27mcd ~/linux
+[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux[00m$ [7mgit add .[27mgit add .
+[?2004l
