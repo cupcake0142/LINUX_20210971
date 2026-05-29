@@ -1,0 +1,26 @@
+Script started on 2026-05-29 09:41:44+09:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week11[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week11[00m$ [7mdf –h[27mdf –h
+[?2004ldf: –h: No such file or directory
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week11[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week11[00m$ [7mdocker ps[27mdocker ps
+[?2004lfailed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week11[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week11[00m$ [7mcd week11[27mcd week11
+[?2004lbash: cd: week11: No such file or directory
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week11[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week11[00m$ [7msudo nano compose.manage.yaml[27msudo nano compose.manage.yaml
+[?2004l[sudo] password for wnseb: 
+[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;55H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                                       compose.manage.yaml                                                [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[?12l[?25h[?25l[28d[K[1;74H(B[0;7m*[119G(B[m[2d[92mservices[39m:[3;2H[92mportainer[39m:[4;2H[92mimage[39m: (B[mportainer/portainer-ce:latest[5d [92mcontainer_name[39m: (B[mwp_portainer[6d [92mports[39m:[7d(B[0;1m[33m - (B[0m[95m"9443:9443"[8;2H[92mvolumes[39m:[9d(B[0m[3m[36m# Docker 소켓 연결[10d(B[0;1m[23m[33m - [39m(B[m/var/run/docker.sock:/var/run/docker.sock[11d(B[0;1m[33m - [39m(B[mportainer_data:/data(B[0m[3m[36m # 설정 영구 저장[12;2H(B[0m[23m[92mnetworks[39m:[13d(B[0;1m[33m - [39m(B[mwp_net[14d [92mrestart[39m: (B[munless-stopped[15d[92mvolumes[39m:[16;2H[92mportainer_data[39m:[17d[92mnetworks[39m:[18;2H[92mwp_net[39m:[19;2H[92mexternal[39m: [95mtrue(B[0m[3m[36m # 10주차 네트워크 재사용[20d(B[0m[23m[92mname[39m: (B[mwordpress_wp_net[21d(B[0m[3m[36m# 9443 : HTTPS (자체 인증서 내장, 별도 설정 X)[39m(B[m[?12l[?25h[?25l[28;54H(B[0;7m[ Writing... ](B[m[1;74H(B[0;7m [119G(B[m[28;52H(B[0;7m[ Wrote 20 lines ](B[m[?12l[?25h[21;47H[?25l[28d[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week11[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week11[00m$ [7mdocker compose -f compose.manage.yaml up -d portainer[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker compose -f compose.manage.yaml up -d portainer
+[?2004lservices.restart must be a mapping
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week11[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week11[00m$ [7mdocker ps | grep portainer[27mdocker ps | grep portainer
+[?2004lfailed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week11[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week11[00m$ [7mcd week10[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd week10
+[A
+[?2004lbash: cd: week10: No such file or directory
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week11[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week11[00m$ [7mcd week10[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd week10
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lbash: cd: week10: No such file or directory
+[?2004h]0;wnseb@BOOK-UASCJ912LA: ~/linux/week11[01;32mwnseb@BOOK-UASCJ912LA[00m:[01;34m~/linux/week11[00m$ cd L[K?[K/wsl[K[K[Kl[Klib[Knx[Kx[Ku[Kux[K[K[K[K[K[K[K[K[Kexit
+[?2004lexit
+
+Script done on 2026-05-29 09:43:55+09:00 [COMMAND_EXIT_CODE="1"]
